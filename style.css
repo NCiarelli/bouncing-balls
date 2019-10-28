@@ -8,11 +8,11 @@ body {
 
 
 .bouncingBall {
-  width: 20px;
-  height: 20px;
+  /* width: 20px;
+  height: 20px; */
   border: 2px solid blue;
   border-radius: 50%;
   background-color: orange;
   position: absolute;
-  transition: top 300ms linear;
+  transition: top 100ms linear;
 }
