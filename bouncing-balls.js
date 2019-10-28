@@ -6,16 +6,40 @@ el.addEventListener("click", (event) => {
   makeBouncingBall(event);
 });
 
+// Global Settings
+const movementStepPortion = 0.1;
+
 // Add a bouncing ball at the point the user clicked
 function makeBouncingBall(event) {
   const newBouncingBall = document.createElement("div");
+  const windowHeight = documentElement.clientHeight;
   newBouncingBall.classList.add("bouncingBall");
-  let startingBallX = event.clientX;
-  let startingBallY = event.clientY;
+
+  // Set the starting positon
+  let startingBallX = event.clientX - 10;
+  let startingBallY = event.clientY - 10;
+  newBouncingBall.style.top = `${startingBallY}px`;
+  newBouncingBall.style.left = `${startingBallX}px`;
+
   document.body.appendChild(newBouncingBall);
 
+  // Setup bounce movement
+  let moveDown = true;
+  const intervalTimer = setInterval(() => {
+    if (moveDown) {
+
+    }
+  }, 200);
+
+
+
 }
 
-function moveBouncingBall(currentBouncingBall, startingX, startingY) {
 
-}
+// function moveBouncingBall(currentBouncingBall, startingX, startingY) {
+
+//   const currentTop = currentBouncingBall.style.top;
+//   if ((currentTop + (windowHeight - startingY) * 0.1) > windowHeight) {
+//     // transform: translateY(-50 %);
+//   }
+// }
